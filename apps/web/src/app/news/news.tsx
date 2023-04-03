@@ -24,7 +24,7 @@ export function News(props: NewsProps) {
   // function sortNews(news: PeaceOfNews[]) { return useMemo(() => s(news, news), [news]) }
 
   useEffect(() => {
-    fetch('http://localhost:3333/api/news')
+    fetch('http://localhost:3001/api/news')
       .then(response => response.json())
       .then(news => {
         const sortedNews = sortNews(news);
